@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dtortīkli</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="testwebcss.css">
+        <style>body {
+                background-color: #dee785;
+            }
+
+            h1 {
+                color: white;
+                text-align: center;
+            }
+            h2{
+                color:whitesmoke
+            }
+            p {
+                font-family: verdana;
+                font-size: 20px;}
+                table, th, td{
+                    border: 1px solid black;
+                    font-family: verdana;
+                
+            }
+        * {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: red;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
+        </style>
+    </head>
+    <body>
+      <button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">Picture</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Refferences</button>
+
+
+<div id="Home" class="tabcontent">
+  
+    <h1>Datortīkli</h1>
+    <h2>Kas ir dartortīkli?</h2>
+        <p>Datortīkls ir datu pārraides sistēma,kas savieno dažādās vietās esošus datorus.</p>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>Attēli</h3>
+  <img src="images/2210748.png" alt="datortikli" width="350px" lenght="250px"> </div>
+   
+
+
+<div id="Contact" class="tabcontent">
+  <h3>Izmsntotāzs saites</h3>
+ <a href="https://www.uzdevumi.lv/p/informatika/5-klase/datortikli-10695/re-1df5494c-f7df-4377-9561-9a5f3541a101">Uzdevumi.lv</a>
+</div>
+
+<div id="About" class="tabcontent">
+    <H2>Datortīklu veidi</H2>
+
+
+        <table>
+            <tr>
+                <th></th>
+                <th>Lokālais datortīkls</th>
+                <th>Terotiālais datortīkls</th></tr>
+            <tr> 
+                <th>Teritorijas lielums</th>
+                <td>Attālums starp diviem lokālā
+                    tīkla datoriem parasti
+                    nepārsniedz 1 km</td>
+                <td>Var savienot datorus dažādās valstīs</td></tr>
+            <tr>
+                <th>Datoru skaits</th>
+                <td>Neliels, parasti izmanto vienu vai
+                    vairākus serverus</td>
+                <td>Daudz vairāk tīklā savienotu datoru
+                    un serveru</td>
+            </tr>
+            <tr><th>Serveris</th>
+                <td>Servera funkcijas var pildīt arī
+                    kāda no darbstacijām</td>
+                <td>Izmanto jaudīgus serverus</td>
+    </tr></table><br>
+</div> <script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script> 
+            
+       
+    <h3>Izmantotās saites</h3>
+    <a href="https://www.uzdevumi.lv/p/informatika/5-klase/datortikli-10695/re-1df5494c-f7df-4377-9561-9a5f3541a101">Uzdevumi.lv</a>
+  
+
+</body>
+</html>
